@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace autoSpa_backend.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]s")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -15,7 +15,7 @@ namespace autoSpa_backend.Controllers
             _productService = productService;
         }
 
-        [HttpGet]
+        [HttpGet("list")]
         public IActionResult GetPaging()
         {
             var data = _productService.GetPaging();

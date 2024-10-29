@@ -21,5 +21,11 @@ namespace autoSpa_backend.Controllers
             var data = _productService.GetPaging();
             return Ok(data);
         }
+        [HttpPost("detail")]
+        public IActionResult GetById(Guid id)
+        {
+            var data = _productService.GetById(id);
+            return Ok(data);
+        }
     }
 }

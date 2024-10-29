@@ -5,6 +5,28 @@ namespace Infrastructure
 {
     public class ProductRepo : IProductRepo
     {
+        /// <summary>
+        /// Lấy chi tiết sản phẩm
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ProductEntity GetById(Guid id)
+        {
+            var productDetail = new ProductEntity
+            {
+                product_id = Guid.NewGuid(),
+                product_name = "ALL WHEEL BRIGHTENER",
+                product_description = "A high-end smartphone with a stunning display.",
+                product_original_price = 699.99m,
+                product_sale_price = 649.99m,
+                imageUrl = "/src/assets/productList/product-list-0.jpg"
+            };
+            return productDetail;
+        }
+        /// <summary>
+        /// Lấy danh sách sản phẩm
+        /// </summary>
+        /// <returns></returns>
         public List<ProductEntity> GetPaging()
         {
             var products = new List<ProductEntity>
@@ -12,74 +34,74 @@ namespace Infrastructure
                 new ProductEntity
                 {
                     product_id = Guid.NewGuid(),
-                    product_name = "Smartphone X1",
+                    product_name = "ALL WHEEL BRIGHTENER",
                     product_description = "A high-end smartphone with a stunning display.",
                     product_original_price = 699.99m,
                     product_sale_price = 649.99m,
-                    imageUrl = "https://example.com/images/smartphone_x1.jpg"
+                    imageUrl = "/src/assets/productList/product-list-0.jpg"
                 },
                 new ProductEntity
                 {
                     product_id = Guid.NewGuid(),
-                    product_name = "Wireless Headphones",
+                    product_name = "CERAMIX LIQUID WAX",
                     product_description = "Noise-canceling wireless headphones with crystal clear sound.",
                     product_original_price = 199.99m,
                     product_sale_price = 149.99m,
-                    imageUrl = "https://example.com/images/wireless_headphones.jpg"
+                    imageUrl = "/src/assets/productList/product-list-1.jpg"
                 },
                 new ProductEntity
                 {
                     product_id = Guid.NewGuid(),
-                    product_name = "Gaming Laptop",
+                    product_name = "CHAI XỊT VỆ SINH NHỰA",
                     product_description = "A powerful laptop for gaming with a fast processor and graphics card.",
                     product_original_price = 1299.99m,
                     product_sale_price = 1149.99m,
-                    imageUrl = "https://example.com/images/gaming_laptop.jpg"
+                    imageUrl = "/src/assets/productList/product-list-2.jpg"
                 },
                 new ProductEntity
                 {
                     product_id = Guid.NewGuid(),
-                    product_name = "Bluetooth Speaker",
+                    product_name = "DA FOAM CUTTING DISC",
                     product_description = "Portable Bluetooth speaker with deep bass and long battery life.",
                     product_original_price = 89.99m,
                     product_sale_price = 69.99m,
-                    imageUrl = "https://example.com/images/bluetooth_speaker.jpg"
+                    imageUrl = "/src/assets/productList/product-list-3.jpg"
                 },
                 new ProductEntity
                 {
                     product_id = Guid.NewGuid(),
-                    product_name = "Smartwatch S2",
+                    product_name = "DUNG DỊCH LÀM SẠCH",
                     product_description = "Stylish smartwatch with multiple health tracking features.",
                     product_original_price = 249.99m,
                     product_sale_price = 199.99m,
-                    imageUrl = "https://example.com/images/smartwatch_s2.jpg"
+                    imageUrl = "/src/assets/favoriteItems/favorite-item-4.jpg"
                 },
                 new ProductEntity
                 {
                     product_id = Guid.NewGuid(),
-                    product_name = "4K LED TV",
+                    product_name = "DUNG DỊCH LÀM SẠCH",
                     product_description = "Large 4K LED TV with smart features and vibrant colors.",
                     product_original_price = 899.99m,
                     product_sale_price = 799.99m,
-                    imageUrl = "https://example.com/images/4k_led_tv.jpg"
+                    imageUrl = "/src/assets/favoriteItems/favorite-item-5.jpg"
                 },
                 new ProductEntity
                 {
                     product_id = Guid.NewGuid(),
-                    product_name = "Wireless Mouse",
+                    product_name = "DUNG DỊCH RỬA XE HYPER",
                     product_description = "Ergonomic wireless mouse with adjustable DPI settings.",
                     product_original_price = 29.99m,
                     product_sale_price = 19.99m,
-                    imageUrl = "https://example.com/images/wireless_mouse.jpg"
+                    imageUrl = "/src/assets/favoriteItems/favorite-item-6.jpg"
                 },
                 new ProductEntity
                 {
                     product_id = Guid.NewGuid(),
-                    product_name = "Mechanical Keyboard",
+                    product_name = "DUNG DỊCH ĐA NĂNG",
                     product_description = "RGB mechanical keyboard with programmable keys.",
                     product_original_price = 99.99m,
                     product_sale_price = 79.99m,
-                    imageUrl = "https://example.com/images/mechanical_keyboard.jpg"
+                    imageUrl = "/src/assets/favoriteItems/favorite-item-7.jpg"
                 },
                 new ProductEntity
                 {

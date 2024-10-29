@@ -12,6 +12,18 @@ namespace Application
             _repo = repo;
         }
         /// <summary>
+        /// Lấy chi tiết sản phẩm
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public ProductEntity GetById(Guid id)
+        {
+            var product = _repo.GetById(id);
+            return product;
+        }
+
+        /// <summary>
         /// Lấy danh sách sản phẩm theo paging
         /// </summary>
         /// <returns></returns>

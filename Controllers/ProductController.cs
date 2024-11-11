@@ -27,5 +27,11 @@ namespace autoSpa_backend.Controllers
             var data = _productService.GetById(id);
             return Ok(data);
         }
+        [HttpGet("token")]
+        public IActionResult GetToken(Guid id)
+        {
+            var data = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImV4YW1wbGVfdXNlciIsInJvbGUiOiJhZG1pbiJ9LCJleHAiOjE3MzEzNTAxMDN9.pPX5d5t1o-D7L-aGPOi0xucbt_cbrwv6RuBZRK8yLgg";
+            return Ok(data);
+        }
     }
 }

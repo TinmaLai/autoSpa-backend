@@ -8,12 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 //  CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin", builder =>
-    {
-        builder.WithOrigins("http://localhost:5173") 
+    options.AddPolicy("AllowAll", builder =>
+        builder.AllowAnyOrigin()
                .AllowAnyMethod()
-               .AllowAnyHeader();
-    });
+               .AllowAnyHeader());
 });
 // Add services to the container.
 builder.Services.AddScoped<IProductRepo, ProductRepo>();
@@ -25,7 +23,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 // use CORS
-app.UseCors("AllowSpecificOrigin");
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -38,5 +36,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseStaticFiles();
+
 
 app.Run();

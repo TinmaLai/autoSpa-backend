@@ -23,11 +23,11 @@ namespace Infrastructure.Model
         /// <summary>
         /// Giá gốc
         /// </summary>
-        public decimal? product_original_price { get; set; }
+        public int? product_original_price { get; set; }
         /// <summary>
         /// Giá giảm giá
         /// </summary>
-        public decimal? product_sale_price { get; set; }
+        public int? product_sale_price { get; set; }
         /// <summary>
         /// Đường dẫn hình ảnh chung
         /// </summary>

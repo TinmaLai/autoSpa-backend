@@ -21,6 +21,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Configuration.AddJsonFile("appsettings.json");
+
 var app = builder.Build();
 // use CORS
 app.UseCors("AllowAll");
